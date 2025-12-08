@@ -7,6 +7,7 @@ import {
   IonContent,
   IonSelect,
   IonSelectOption,
+  IonFooter
 } from '@ionic/angular/standalone';
 import { CirculoComponent } from '../components/circulo/circulo.component';
 import { CuadradoComponent } from '../components/cuadrado/cuadrado.component';
@@ -30,6 +31,7 @@ import { TrianguloComponent } from '../components/triangulo/triangulo.component'
     CuadradoComponent,
     RectanguloComponent,
     TrianguloComponent,
+    IonFooter
   ],
 })
 export class HomePage {

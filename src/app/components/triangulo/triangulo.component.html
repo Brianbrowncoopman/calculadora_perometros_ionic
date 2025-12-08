@@ -1,6 +1,5 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Triangulo</ion-card-title>
     <ion-card-subtitle>Perímetro</ion-card-subtitle>
   </ion-card-header>
 
@@ -8,40 +7,36 @@
     <p>
       El perímetro de un Triangulo es la suma de longitud de sus 3 lados .
     </p>
-
-    <p><strong>Donde:</strong></p>
-    <p><strong>P</strong>: perímetro</p>
-    <p><strong>L</strong>: lado</p>
-    <p><strong>P = L1 + L2 + L3</strong></p>
+    <br />
+    <h6><strong>P</strong>: perímetro</h6>
+    <h6><strong>L</strong>: lado</h6>
+    <h6><strong>P = L1 + L2 + L3</strong></h6>
     
-    
-
     <!-- Opcional: imagen a la derecha -->
     <div class="img-container">
       <img src="assets/img/triangulo_equilatero.png" alt="Círculo" />
     </div>
   </ion-card-content>
+  <!------------------->  
+  <ion-card-content>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-input [(ngModel)]="lado1Str" type="number" label="Lado 1" label-placement="floating" fill="solid" placeholder="Ingrese el lado 1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="lado2Str" type="number" label="Lado 2" label-placement="floating" fill="solid" placeholder="Ingrese el lado 2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="lado3Str" type="number" label="Lado 3" label-placement="floating" fill="solid" placeholder="Ingrese el lado 3"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="calcularPerimetro()">Calcular</ion-button> 
+      </ion-item>
+      <ion-item>
+        {{resultado}}
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
 </ion-card>
-
-  <ion-item>
-    <h2>Triangulo</h2>
-  </ion-item>
-
-<ion-list lines="none">
- <ion-item>
-    <ion-input [(ngModel)]="lado1Str" type="number" label="Lado 1" label-placement="floating" fill="solid" placeholder="Ingrese el lado 1"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="lado2Str" type="number" label="Lado 2" label-placement="floating" fill="solid" placeholder="Ingrese el lado 2"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input [(ngModel)]="lado3Str" type="number" label="Lado 3" label-placement="floating" fill="solid" placeholder="Ingrese el lado 3"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-button (click)="calcularPerimetro()">Calcular</ion-button> 
-  </ion-item>
-  <ion-item>
-    {{resultado}}
-  </ion-item>
 
 

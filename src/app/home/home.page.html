@@ -1,31 +1,44 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Calculadora de perímetros App
-      <h6>Programación 2</h6>
+  <ion-toolbar class="tool">
+    <ion-title class="tool-titulo">
+      <h2>Calculadora de perímetros</h2>
+      <h6>Programación 2-Bimestre 5</h6>
       <h5>IPLACEX</h5>
-      <h6>Bimestre 5</h6>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <h2><strong>Elige una figura</strong></h2>
+<ion-content [fullscreen]="true" class="home-content">
+  <div class="home-container">
+    <!--<h2 class="home-title"><strong>Elige una figura</strong></h2>-->
 
-  <ion-select
-    placeholder="Selecciona una figura"
-    (ionChange)="manejarSeleccionFigura($event)">
-    <ion-select-option value="circulo">Círculo</ion-select-option>
-    <ion-select-option value="cuadrado">Cuadrado</ion-select-option>
-    <ion-select-option value="rectangulo">Rectángulo</ion-select-option>
-    <ion-select-option value="triangulo">Triángulo</ion-select-option>
-  </ion-select>
+    <ion-select
+      class="figura-select"
+      placeholder="Selecciona una figura"
+      (ionChange)="manejarSeleccionFigura($event)">
+      <ion-select-option value="circulo">Círculo</ion-select-option>
+      <ion-select-option value="cuadrado">Cuadrado</ion-select-option>
+      <ion-select-option value="rectangulo">Rectángulo</ion-select-option>
+      <ion-select-option value="triangulo">Triángulo</ion-select-option>
+    </ion-select>
 
-  <app-circulo   *ngIf="esCirculo()"></app-circulo>
-  <app-cuadrado  *ngIf="esCuadrado()"></app-cuadrado>
-  <app-rectangulo *ngIf="esRectangulo()"></app-rectangulo>
-  <app-triangulo *ngIf="esTriangulo()"></app-triangulo>
+    <div class="figura-container">
+      <app-circulo   *ngIf="esCirculo()"></app-circulo>
+      <app-cuadrado  *ngIf="esCuadrado()"></app-cuadrado>
+      <app-rectangulo *ngIf="esRectangulo()"></app-rectangulo>
+      <app-triangulo *ngIf="esTriangulo()"></app-triangulo>
+    </div>
+  </div>
 </ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="footer-toolbar">
+    <ion-title class="footer-titulo">
+      <h6>Desarrollado por: Brian Brown Coopman</h6>
+      <h6>© 2025-2026</h6>
+    </ion-title>
+  </ion-toolbar>
+
 
 
  
