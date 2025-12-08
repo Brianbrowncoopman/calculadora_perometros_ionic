@@ -1,3 +1,39 @@
-<p>
-  triangulo works!
-</p>
+<!--<ion-list lines="none">
+  <ion-item>
+    <h2>Triangulo</h2>
+  </ion-item>
+ <ion-item>
+    <ion-input [(ngModel)]="sueldoBrutoStr" type="number" label="Sueldo Bruto" label-placement="floating" fill="solid" placeholder="Ingrese el sueldo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="calcularSueldoLiquido()">Calcular</ion-button> 
+  </ion-item>
+  <ion-item>
+    {{resultado}}
+  </ion-item>
+</ion-list>-->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Triangulo</ion-card-title>
+    <ion-card-subtitle>Perímetro</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>
+      El perímetro de un Triangulo es la suma de longitud de sus 3 lados .
+    </p>
+
+    <p><strong>Donde:</strong></p>
+    <p><strong>P</strong>: perímetro</p>
+    <p><strong>L</strong>: lado</p>
+    <p><strong>P = L1 + L2 + L3</strong></p>
+    
+    
+
+    <!-- Opcional: imagen a la derecha -->
+    <div class="img-container">
+      <img src="assets/img/triangulo_equilatero.png" alt="Círculo" />
+    </div>
+  </ion-card-content>
+</ion-card>
