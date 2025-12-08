@@ -1,21 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { IonItem, IonList, IonCard ,IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent
+import { FormsModule } from '@angular/forms';
+import { IonItem, IonList, IonCard ,IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonButton
 
-} from '@ionic/angular/standalone';
+ } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-circulo',
   templateUrl: './circulo.component.html',
   styleUrls: ['./circulo.component.scss'],
   standalone: true,
-  imports: [IonList, IonItem, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent],
+  imports: [FormsModule ,IonList, IonItem, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonButton],
 })
 export class CirculoComponent  implements OnInit {
-  circuloStr: string = '';
+  lado1Str = '';
 
-  
+  resultado = '';
 
   constructor() { }
+
+  calcularPerimetro() {
+    const radio = parseFloat(this.lado1Str) || 0;
+    const perimetro = 2 * Math.PI * radio;
+    this.resultado = `El perímetro del círculo es: ${perimetro}`;
+  }
 
   ngOnInit() {}
 

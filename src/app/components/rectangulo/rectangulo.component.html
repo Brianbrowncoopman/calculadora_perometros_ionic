@@ -1,17 +1,3 @@
-<!--<ion-list lines="none">
-  <ion-item>
-    <h2>Circulo</h2>
-  </ion-item>
- <ion-item>
-    <ion-input [(ngModel)]="sueldoBrutoStr" type="number" label="Sueldo Bruto" label-placement="floating" fill="solid" placeholder="Ingrese el sueldo"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-button (click)="calcularSueldoLiquido()">Calcular</ion-button> 
-  </ion-item>
-  <ion-item>
-    {{resultado}}
-  </ion-item>
-</ion-list>-->
 <ion-card>
   <ion-card-header>
     <ion-card-title>Rectangulo</ion-card-title>
@@ -35,3 +21,27 @@
     </div>
   </ion-card-content>
 </ion-card>
+
+<ion-item>
+    <h2>Rectangulo</h2>
+  </ion-item>
+
+<ion-list lines="none">
+ <ion-item>
+    <ion-input [(ngModel)]="lado1Str" type="number" label="Lado 1" label-placement="floating" fill="solid" placeholder="Ingrese el lado 1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="lado2Str" type="number" label="Lado 2" label-placement="floating" fill="solid" placeholder="Ingrese el lado 2"></ion-input>
+  </ion-item>
+  <!--<ion-item>
+    <ion-input [(ngModel)]="lado3Str" type="number" label="Lado 3" label-placement="floating" fill="solid" placeholder="Ingrese el lado 3"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="lado4Str" type="number" label="Lado 4" label-placement="floating" fill="solid" placeholder="Ingrese el lado 4"></ion-input>
+  </ion-item>-->
+  <ion-item>
+    <ion-button (click)="calcularPerimetro()">Calcular</ion-button> 
+  </ion-item>
+  <ion-item>
+    {{resultado}}
+  </ion-item>

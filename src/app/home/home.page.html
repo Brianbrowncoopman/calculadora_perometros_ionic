@@ -1,31 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title >
-      Calculadora de perimetros App
-      <h6>
-      Programacion 2
-      </h6>
-      <h5>
-        IPLACEX
-      </h5>
-      <h6>
-        Bimestre 5
-      </h6>
+    <ion-title>
+      Calculadora de perímetros App
+      <h6>Programación 2</h6>
+      <h5>IPLACEX</h5>
+      <h6>Bimestre 5</h6>
     </ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <h2><strong>Elige una figura</strong></h2>
 
-    
+  <ion-select
+    placeholder="Selecciona una figura"
+    (ionChange)="manejarSeleccionFigura($event)">
+    <ion-select-option value="circulo">Círculo</ion-select-option>
+    <ion-select-option value="cuadrado">Cuadrado</ion-select-option>
+    <ion-select-option value="rectangulo">Rectángulo</ion-select-option>
+    <ion-select-option value="triangulo">Triángulo</ion-select-option>
+  </ion-select>
 
-    <app-circulo/>
-    <app-cuadrado/>
-    <app-rectangulo/>
-    <app-triangulo/> 
-  
+  <app-circulo   *ngIf="esCirculo()"></app-circulo>
+  <app-cuadrado  *ngIf="esCuadrado()"></app-cuadrado>
+  <app-rectangulo *ngIf="esRectangulo()"></app-rectangulo>
+  <app-triangulo *ngIf="esTriangulo()"></app-triangulo>
 </ion-content>
+
 
  
