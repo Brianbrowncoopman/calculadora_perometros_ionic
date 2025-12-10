@@ -1,39 +1,38 @@
-<ion-card>
+<ion-card class="card-rectangulo">
   <ion-card-header>
     <ion-card-title>Rectangulo</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content class="info">
     <p>
       El perímetro de un Rectangulo es la suma de la longitud de sus cuatro lados donde los lados son iguales entre si.
     </p>
-    <br />    
-    <h6><strong>P</strong>: perímetro</h6>
-    <h6><strong>L</strong>: largo</h6>
-    <h6><strong>A</strong>: Ancho</h6>
-    <h6><strong>P = 2 x (L + A)</strong></h6>
-
-    <!-- Opcional: imagen a la derecha -->
-    <div class="img-container">
-      <img src="assets/img/rectangulo.png" alt="Círculo" />
+    <div class="data">
+      <div class="text">
+        <h6><strong>P</strong>: perímetro</h6>
+        <h6><strong>L</strong>: largo</h6>
+        <h6><strong>A</strong>: Ancho</h6>
+        <h6><strong>P = 2 x (L + A)</strong></h6>
+      </div>
+        
+      <ion-img src="assets/img/rectangulo.png" alt="Círculo"> </ion-img> />
     </div>
   </ion-card-content>
 <!------------------->
 
-  <ion-card-content>
-    <ion-list >
-      <ion-item>
+  <ion-card-content class="form">
+    
+      
         <ion-input [(ngModel)]="lado1Str" type="number" label="Lado 1" label-placement="floating" fill="solid" placeholder="Ingrese el lado 1"></ion-input>
-      </ion-item>
-      <ion-item>
+      
         <ion-input [(ngModel)]="lado2Str" type="number" label="Lado 2" label-placement="floating" fill="solid" placeholder="Ingrese el lado 2"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-button (click)="calcularPerimetro()">Calcular</ion-button> 
-      </ion-item>
-      <ion-item>
-        {{resultado}}
-      </ion-item>
-    </ion-list>
+      
+      <ion-button expand="block" (click)="calcularPerimetro()">
+        Calcular
+      </ion-button>
+      
+      <div class="resultado" *ngIf="resultado">
+      {{ resultado }}
+      </div>
   </ion-card-content>
 </ion-card>

@@ -1,19 +1,55 @@
-ion-card {
+.card-circulo {
   max-width: 320px;
-  background-color:  rgb(233, 230, 197) ;
-  color: black; 
+  margin: auto;
+  background: rgb(233, 230, 197);
+  color: black;
 }
 
-.img-container {
+/* información */
+.info {
+  --background: transparent;
+}
+
+.data {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 8px;
-
-  img {
-    width: 80px;
-    height: auto;
-  }
+  justify-content: space-between;
+  align-items: flex-start;
 }
+
+.data img {
+  width: 80px;
+}
+
+/* formulario */
+.form {
+  --background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* input controlado */
+ion-input {
+  background: white;
+  border-radius: 6px;
+  padding-left: 8px;
+  border: 1px solid #ccc;
+  --background: white;
+}
+
+/* botón */
+ion-button {
+  margin-top: 8px;
+}
+
+/* resultado */
+.resultado {
+  background: rgba(255,255,255,0.8);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
 
 
 

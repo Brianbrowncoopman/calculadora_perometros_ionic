@@ -1,2 +1,45 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+/* ======================================================
+   TEMA GLOBAL – MODO CLARO FORZADO
+   ====================================================== */
+
+/* Evita que Ionic use el modo oscuro del sistema */
+:root {
+  color-scheme: light;
+}
+
+/* VARIABLES BASE */
+:root,
+:root.md,
+:root.ios {
+
+  /* Fondo general de la app */
+  --ion-background-color: #e6f2ff;
+
+  /* Texto */
+  --ion-text-color: #000000;
+
+  /* Card */
+  --ion-card-background: rgb(233, 230, 197);
+
+  /* Items / Listas */
+  --ion-item-background: transparent;
+  --ion-item-color: #000000;
+
+  /* Inputs */
+  --ion-input-background: #ffffff;
+
+  /* Toolbar / Header */
+  --ion-toolbar-background: #b8c9c6;
+  --ion-toolbar-color: #000000;
+
+  /* Botón primario */
+  --ion-color-primary: #4c8dff;
+  --ion-color-primary-contrast: #ffffff;
+}
+
+/* ======================================================
+   IMPORTANTE:
+   NO DEFINIMOS prefers-color-scheme: dark
+   ====================================================== */

@@ -1,38 +1,36 @@
-<ion-card>
+<ion-card class="card-cuadrado">
   <ion-card-header>
     <ion-card-title>Cuadrado</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content class="info">
     <p>
       El perímetro de un Cuadrado es la suma de la longitud de las 4 línea que forman sus 4 bordes.
     </p>
-    <br />
-    <h6><strong>P</strong>: perímetro</h6>
-    <h6><strong>L</strong>: lado</h6>
-    <h6><strong>P = L X 4</strong></h6>
-    <h6><strong>P = L1 + L2 + L3 + L4</strong></h6>
-    
 
-    <!-- Opcional: imagen a la derecha -->
-    <div class="img-container">
-      <img src="assets/img/cuadrado.png" alt="Círculo" />
-    </div>
+    <div class="data">
+      <div class="text">
+        <h6><strong>P</strong>: perímetro</h6>
+        <h6><strong>L</strong>: lado</h6>
+        <h6><strong>P = L X 4</strong></h6>
+        <h6><strong>P = L1 + L2 + L3 + L4</strong></h6>
+      </div>
+
+      <ion-img src="assets/img/cuadrado.png" alt="Círculo"></ion-img>
+    </div> 
   </ion-card-content>
 
 <!------------------->
-  <ion-card-content>
-    <ion-list>
-      <ion-item>
-        <ion-input [(ngModel)]="ladoStr" type="number" label="Lado" label-placement="floating" fill="solid" placeholder="Ingrese el lado"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-button (click)="calcularPerimetro()">Calcular</ion-button> 
-      </ion-item>
-      <ion-item>
-        {{resultado}}
-      </ion-item> 
-    </ion-list>
+  <ion-card-content class="form">
+    <ion-input [(ngModel)]="ladoStr" type="number" label="Lado" label-placement="floating" fill="solid" placeholder="Ingrese el lado"></ion-input>
+      
+    <ion-button expand="block" (click)="calcularPerimetro()">
+      Calcular
+    </ion-button>
+      
+    <div class="resultado" *ngIf="resultado">
+      {{ resultado }}
+    </div>
   </ion-card-content>
 </ion-card>
 

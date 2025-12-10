@@ -1,16 +1,51 @@
-iion-card {
+.card-rectangulo {
   max-width: 320px;
-  background-color:  rgb(225, 42, 42) ;
-  color: black; 
+  margin: auto;
+  background: rgb(133, 209, 118);
+  color: black;
 }
 
-.img-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 8px;
+/* información */
+.info {
+  --background: transparent;
+}
 
-  img {
-    width: 80px;
-    height: auto;
-  }
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.data img {
+  width: 80px;
+}
+
+/* formulario */
+.form {
+  --background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* input controlado */
+ion-input {
+  background: white;
+  border-radius: 6px;
+  padding-left: 8px;
+  border: 1px solid #ccc;
+  --background: white;
+}
+
+/* botón */
+ion-button {
+  margin-top: 8px;
+}
+
+/* resultado */
+.resultado {
+  background: rgba(255,255,255,0.8);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
 }

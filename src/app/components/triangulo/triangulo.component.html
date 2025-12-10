@@ -1,41 +1,60 @@
-<ion-card>
+<ion-card class="card-triangulo">
   <ion-card-header>
-    <ion-card-subtitle>Perímetro</ion-card-subtitle>
+    <ion-card-title>Triángulo</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content class="info">
     <p>
-      El perímetro de un Triangulo es la suma de longitud de sus 3 lados .
+     El perímetro de un Triángulo es la suma de la longitud de sus lados.
     </p>
-    <br />
-    <h6><strong>P</strong>: perímetro</h6>
-    <h6><strong>L</strong>: lado</h6>
-    <h6><strong>P = L1 + L2 + L3</strong></h6>
-    
-    <!-- Opcional: imagen a la derecha -->
-    <div class="img-container">
-      <img src="assets/img/triangulo_equilatero.png" alt="Círculo" />
+
+    <div class="data">
+      <div class="text">
+        <h6><strong>P</strong>: perímetro</h6>
+        <h6><strong>L</strong>: lado</h6>
+        <h6><strong>P = L1 + L2 + L3</strong></h6>
+      </div>
+
+      <ion-img src="assets/img/triangulo_equilatero.png" alt="Triángulo"></ion-img>
     </div>
   </ion-card-content>
-  <!------------------->  
-  <ion-card-content>
-    <ion-list lines="none">
-      <ion-item>
-        <ion-input [(ngModel)]="lado1Str" type="number" label="Lado 1" label-placement="floating" fill="solid" placeholder="Ingrese el lado 1"></ion-input>
+ 
+
+  <ion-card-content class="form">
+    <ion-item>
+      <ion-label position="floating">Tipo de Triángulo</ion-label>
+        <ion-select
+           [(ngModel)]="tipoTriangulo"
+           (ionChange)="manejarSeleccionTipo($event)"
+            placeholder="Seleccionar">
+            <ion-select-option value="escaleno">Escaleno (3 lados)</ion-select-option>
+            <ion-select-option value="equilatero">Equilátero (1 lado)</ion-select-option>
+        </ion-select>
       </ion-item>
-      <ion-item>
-        <ion-input [(ngModel)]="lado2Str" type="number" label="Lado 2" label-placement="floating" fill="solid" placeholder="Ingrese el lado 2"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-input [(ngModel)]="lado3Str" type="number" label="Lado 3" label-placement="floating" fill="solid" placeholder="Ingrese el lado 3"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-button (click)="calcularPerimetro()">Calcular</ion-button> 
-      </ion-item>
-      <ion-item>
-        {{resultado}}
-      </ion-item>
-    </ion-list>
+      <br/>
+
+      <ion-input 
+       *ngIf="tipoTriangulo === 'equilatero'"
+       [(ngModel)]="lado1Str" 
+       type="number" 
+       label="Lado" 
+       label-placement="floating" 
+       fill="solid" 
+       placeholder="Ingrese la longitud del lado"></ion-input>
+
+      <div *ngIf="tipoTriangulo === 'escaleno'" style="display: flex; flex-direction: column; gap: 12px;">
+      <ion-input [(ngModel)]="lado1Str" type="number" label="Lado A" label-placement="floating" fill="solid" placeholder="Ingrese el lado 1"></ion-input>
+      <ion-input [(ngModel)]="lado2Str" type="number" label="Lado B" label-placement="floating" fill="solid" placeholder="Ingrese el lado 2"></ion-input>
+      <ion-input [(ngModel)]="lado3Str" type="number" label="Lado C" label-placement="floating" fill="solid" placeholder="Ingrese el lado 3"></ion-input>
+    </div>
+ 
+    <ion-button expand="block" (click)="calcularPerimetro()">
+      Calcular
+    </ion-button> 
+ 
+    <div class="resultado" *ngIf="resultado">
+       {{ resultado }}
+    </div>
   </ion-card-content>
 </ion-card>
 

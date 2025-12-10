@@ -50,6 +50,36 @@ export class TrianguloEquilatero extends TrianguloEscaleno {
   }
 }
 
+export class Cuadrado extends FiguraGeometrica{
+  private lado: number;
+
+  constructor(lado: number){
+    super("Cuadrado");
+    this.lado = lado;
+  }
+
+  calcularPerimetro(): number {
+    return 4 * this.lado;
+  }
+}
+
+export class Rectangulo extends FiguraGeometrica{
+  private lado1: number;
+  private lado2: number;    
+  
+  constructor(lado1: number, lado2: number){
+    super("Rectángulo");
+    this.lado1 = lado1;
+    this.lado2 = lado2;        
+  }
+
+  calcularPerimetro(): number {
+    return 2 * (this.lado1 + this.lado2) ;
+  }
+}
+
+
+
 const c = new Circulo(5);
 console.log(c.calcularPerimetro());
 
