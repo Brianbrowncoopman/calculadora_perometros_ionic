@@ -71,3 +71,62 @@
   text-align: center; 
 }
 
+/* Estilos de la barra superior (Header) */
+.tool {
+ --background:#b2c2c0;
+  /* Anula la altura mínima de la toolbar */
+ --min-height: 50px; /* Puedes ajustar este valor, 50px es un buen punto de partida */
+  /* Elimina el padding predeterminado */
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+.tool-titulo {
+ font-size: 1rem;
+ font-weight: bold;
+ color: #060606;
+  /* Eliminar padding extra de ion-title */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Simplifica la fuente si es necesario */
+.tool-titulo h2,
+.tool-titulo h6,
+.tool-titulo h5 {
+ text-align: center; 
+ font-size: 0.8rem; /* Aumentado ligeramente para legibilidad */
+  margin: 2px 0; /* Espacio mínimo entre líneas, crucial para reducir la altura */
+}
+
+
+/* Estilos del pie de página (Footer) */
+.footer{
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+}
+
+.footer-toolbar{
+ --background: #b2c2c0;
+  /* Anula la altura mínima de la toolbar en el footer */
+  --min-height: 35px; /* Más bajo que el header */
+  /* Elimina el padding predeterminado */
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+.footer-titulo{
+ font-size: 0.8rem; /* Ajustado el tamaño general */
+ font-weight: bold;
+ color: #060606;
+ text-align: center; 
+  /* Eliminar padding extra de ion-title */
+  padding: 0;
+}
+
+/* Aplicar margen cero a los h6 dentro del título del footer */
+.footer-titulo h6 {
+    margin: 0;
+    line-height: 1.2; /* Asegura un espaciado de línea compacto */
+}

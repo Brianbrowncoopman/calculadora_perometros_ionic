@@ -50,6 +50,10 @@ export class TrianguloEquilatero extends TrianguloEscaleno {
   }
 }
 
+
+
+
+
 export class Cuadrado extends FiguraGeometrica{
   private lado: number;
 
