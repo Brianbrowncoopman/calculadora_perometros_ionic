@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {  IonCard ,IonCardHeader, IonImg, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonButton
-
- } from '@ionic/angular/standalone';
-
+import {  IonCard ,IonCardHeader, IonImg, IonCardTitle, IonCardSubtitle, IonCardContent, IonInput, IonButton } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { Circulo } from 'src/app/modelo/clases';
 
